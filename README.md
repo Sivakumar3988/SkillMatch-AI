@@ -23,4 +23,5 @@ Most Applicant Tracking Systems (ATS) use exact keyword matching. If a job post 
 - sentence-transformers (`all-MiniLM-L6-v2`)
 - Scikit-learn
 - NLTK
-- pdfplumber / python-docx
+- pdfplumber / python-docx ![Screenshot 2025-04-14 150610](https://github.com/user-attachments/assets/7d2fb661-db1c-4cbf-8e6a-d325a891ca8c)
+
