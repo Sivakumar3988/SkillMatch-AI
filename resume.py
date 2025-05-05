@@ -11,10 +11,12 @@ def extract_text_from_pdf(file) -> str: #return in text
                 text += page_text + "\n"  #only adds the text if something was found
     return text
 
+# Function to extract text from a .docx file
 def extract_text_from_docx(file) -> str:
     doc = docx.Document(file)
     return "\n".join([para.text for para in doc.paragraphs])
 
+# Function to extract text based on file type (PDF, DOCX, or TXT)
 def get_text(file) -> str:
     name = file.name.lower()
     if name.endswith(".pdf"):
@@ -23,7 +25,7 @@ def get_text(file) -> str:
         return extract_text_from_docx(file)
     elif name.endswith(".txt"):
         return file.read().decode("utf-8")
-    else:
+    else:  # If the file type is unsupported
         raise ValueError("Unsupported file type")
 
             
